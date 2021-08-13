@@ -34,12 +34,6 @@ Princess-inspired skin for the dash. *planned*
 
 #### Kink Add-ons
 
-##### Hypo Goonette
-Explicit periodic reminders of why you girls are here. **Complete**
-
-##### Hypo Sissy
-Explicit periodic reminders of why you sissies are here. **Complete**
-
 ##### Expose Me
 Takes pictures via webcam at random intervals and posts them. Dangerous. For true fans of the exposure kink only. *wishlist*
 
