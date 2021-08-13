@@ -77,8 +77,25 @@ function setDashTweak( head, path ) {
 	head.appendChild(link);
 }
 
-function fixCdn05() {
-    document.body.innerHTML = document.body.innerHTML.replace(/cdn05/g, 'cdno05');
+function fixCdn05() {    
+    imgs = document.querySelectorAll("img");
+    for (i=0; i<imgs.length; i++ ) {
+        let img = imgs[i];
+        if ( img.src.includes("cdn05") ) {
+            newsrc = img.src.replace(/cdn05/g, 'cdno05' );
+            img.src = newsrc;
+        }
+    }
+    hrefs = document.querySelectorAll("a");
+    for (i=0; i<hrefs.length; i++ ) {
+        let curr_href = hrefs[i];
+        if ( curr_href.href.includes("cdn05") ) {
+            newhref = curr_href.href.replace(/cdn05/g, 'cdno05' );
+            curr_href.href = newhref;
+        }
+    }
+    // re-run every 2s to handle scrolling.
+    setTimeout( fixCdn05, 2000);
 }
 
 function fixActivity() {
