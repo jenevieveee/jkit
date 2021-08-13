@@ -57,10 +57,10 @@ J-Kit is Jennie's kit. You know me from BDSMLR and the BDSMLR Zendesk forums. Ye
 Follow the development at [https://jkit.bdsmlr.com/](https://jkit.bdsmlr.com/)
 
 ## Sister Project
-Be sure to also check out alternate themes for your blog at [https://github.com/jenevieveee/bdsmlr-themes](BDSMLR-Themes) or [https://themesbyjennie.bdsmlr.com](Themes by Jennie)
+Be sure to also check out alternate themes for your blog at [BDSMLR-Themes](https://github.com/jenevieveee/bdsmlr-themes) or [Themes by Jennie](https://themesbyjennie.bdsmlr.com)
 
 ## Ad block
-I can write an ad-blocker for bdsmlr and incorporate it into the add-on (like XKit's anti-capitalism module), but I'm not going to. Don't ask.  If you don't like the ads, see [https://bdsmlr.com/subscriptions](BDSMLR Subscriptions). 
+I can write an ad-blocker for bdsmlr and incorporate it into the add-on (like XKit's anti-capitalism module), but I'm not going to. Don't ask.  If you don't like the ads, see [BDSMLR Subscriptions](https://bdsmlr.com/subscriptions). 
 
 **IF** I can figure out how the site tells subscribed users from non-subscribed users on the front-end (I haven't looked too hard), I will try to add one to block the once-daily and archives pop-ups. Because they shouldn't be there in the first place if you are a subscribed user.
 
