@@ -1,0 +1,18 @@
+/* Copyright 2021 AJE https://github.com/jenevieveee */
+
+.reblogcontent { display: grid; }
+.image_content { grid-row: 1; }
+.reblogimage { grid-row: 1; }
+.textcontent { grid-row: 2; }
+.earlycomments { grid-row: 3; }
+
+.reblogcontent .fa-times-circle {
+grid-row: 3;
+}
+
+.addcaption { grid-row: 4; }
+.reblog-info { 
+grid-row: 5; 
+padding-top: 5px;
+}
+

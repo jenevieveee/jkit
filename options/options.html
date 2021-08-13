@@ -1,0 +1,73 @@
+<!-- Copyright 2021 AJE https://github.com/jenevieveee -->
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="options.css"/>
+  </head>
+
+  <body>
+  <div class="bigwarning">Don't forget to hit save when you're done!!</div>
+    <h1>Utilities</h1>
+    <section class="Boss Screen">
+       <div class="title" >Boss Screen</div>
+         <div class="optdesc">
+           Redirects bdsmlr.com to google.com after the configured amount of inactivity. Handy if you tend to accidentally leave the window open.
+         </div>
+       <input id="BossScreen" type="checkbox" name="BossScreen"/><label for="BossScreen">Enable Boss Screen</label><br>
+       <input id="BossScreenTimeout" type="text" name="BossScreenTimeout" value="10" style="width: 4em"><label for="BossScreenTimeout">Timeout in minutes</label><br>
+    </section>
+    <hr/>
+    <section class="Dash Tweaks">
+        <div class="title" >Dash Tweaks</div>
+        <div class="optdesc">Various tweaks to the dash to make life easier. </div>
+      
+        <input id="BigReblog" type="checkbox" name="BigReblog"/><label for="BigReblog">Bigger Reblog Button. Affects all views.</label> <br>
+        <input id="ReblogOnBottom" type="checkbox" name="ReblogOnBottom"/><label for="ReblogOnBottom">Reblog to Blog on Bottom</label><br>
+        <input id="ReblogGrid" type="checkbox" name="ReblogGrid"/> <label for="ReblogGrid">Set the Reblog/Queue/Drafts into a grid instead of a dropdown</label><br>
+        <input id="ShortenPosts" type="checkbox" name="ShortenPosts"/><label for="ShortenPosts">Shorten long posts when viewing 3 column or responsive blogs. Prevents a single post from flowing too far down. Permalink view is unaffected, if you want to see the entire post.</label><br>
+        <input id="AppNotice" type="checkbox" name="AppNotice"/><label for="AppNotice">Hide the App Notice</label><br>
+        
+        <input id="MessagesLayout" type="checkbox" name="MessagesLayout"/> <label for="MessagesLayout">Improves the look of the /messages page. No more blog names over the message preview.</label><br>
+      
+        <div class="optdesc">
+            Misc fixes for broken BDSMLR stuff. These may not, or suddenly stop working. Generally, they make the experience better, until the problem is actually fixed sever side, then they make the problem worse. These options will be removed when the actual fix is made.
+         </div>
+        <input id="FixCdn05" type="checkbox" name="FixCdn05"/> <label for="FixCdn05">Fix <i>most</i> (not all) broken images on cdn05.bdsmlr.com</label><br>
+        <input id="FixActivity" type="checkbox" name="FixActivity"/> <label for="FixActivity">"Fix" the non-responsive activity sidebar by disabling the sidebar action for activity and opening the links in a new tab.</label><br>
+    </section>
+    </hr>
+    <section class="Skins">
+        <div class="title">Skins</div>
+        <div class="optdesc">Skins for the dash</div>
+            <input type="radio" id="SkinChoiceDefault" name="SkinChoice" value="default"><label for="SkinChoiceDefault">Default</label><br>
+            <input type="radio" id="SkinChoiceMetal" name="SkinChoice" value="metal"><label for="SkinChoiceMetal">Metal</label><br>
+            <!-- <input type="radio" id="SkinChoicePrincess" name="SkinChoice" value="princess"><label for="SkinChoicePrincess*">Princess</label><br> -->
+            
+            <input type="checkbox" name="OverrideBlog" id="OverrideBlog"><label for="OverrideBlog">Use the chosen skin on all blogs in addition to the dash. (No effect on default)</label>
+    </section>
+    </hr>
+<!-- removed for now because posting the images violates github ToS -->
+<!--
+    <h1>Kinks</h1>
+    <section class="Goonette">
+        <div class="title">Hypno</div>
+        <div class="optdesc"> Not-so-subtle reminders of who you are.</div>
+        <div class="littlewarning">It is not recommended that you use these together.</div>
+        <input id="GoonActive" type="checkbox" name="GoonActive"/><label for="GoonActive">Enable Hypno Goon</label><br>
+        <input id="SissyActive" type="checkbox" name="SissyActive"/><label for="SissyActive">Enable Hypno Sissy</label><br>
+    </section>
+-->
+    <h1>Funny</h1>
+    <section class="Cum">
+        <div class="title">Cum</div>
+        <div class="optdesc">Your screen gets a big load every few minutes.</div>
+        <input id="CumActive" type="checkbox" name="CumActive"/><label for="CumActive">Enable Screen Cum</label> <br>
+    </section>
+    <hr/>
+    <button id="SaveInput" type="button" name="SaveInput" style="width: 20em; margin:auto; text-align:center;">Save</button>
+    <script src="options.js"></script>
+  </body>
+
+</html>

@@ -1,0 +1,42 @@
+{
+    "description": "JKit -- Enhancements for BDSMLR",
+    "manifest_version": 2,
+    "name": "jkit",
+    "version": "0.1",
+    "homepage_url": "https://github.com/jenevieveee/jkit",
+
+    "content_scripts": [{
+        "js": ["scripts/storage.js",  
+                "scripts/common.js", 
+                "scripts/dashtweaks.js", 
+                "scripts/boss.js", 
+                "scripts/cum.js", 
+                "scripts/goon.js", 
+                "scripts/skin.js"],
+        "matches": [ "*://*.bdsmlr.com/*" ]
+    }],
+
+    "icons": {
+        "96": "icons/jkit.png"
+    },
+
+    "permissions": [
+        "*://*.bdsmlr.com/*",
+        "storage",
+        "activeTab"
+    ],
+
+    "web_accessible_resources": [
+        "css/*.css",
+        "icons/*.png",
+        "img/goon/*.gif",
+        "img/cum/*.png",
+        "img/sissy/*.gif",
+        "img/sissy/*.jpg"
+    ],
+  
+    "options_ui": {
+        "page": "options/options.html"
+  }
+
+}

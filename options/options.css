@@ -1,0 +1,42 @@
+/* Copyright 2021 AJE https://github.com/jenevieveee */
+
+body {
+  width: 40em;
+  font-family: "Open Sans Light", sans-serif;
+  font-size: 0.9em;
+  font-weight: 300;
+  margin: 2em;
+}
+
+
+.title {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
+.optdesc {
+    margin-left: 2em;
+    font-style: italic;
+    margin-bottom: 0.5em;
+    margin-top:1em;
+}
+
+label {
+  margin-left: 0.5em;
+}
+
+input {
+  margin: auto;
+/*  width: 200px;*/
+/*  height: 2.5em;*/
+}
+
+.littlewarning {
+    font-style: italic;
+    font-size: 1.5em;
+}
+
+.bigwarning {
+    font-style: bold;
+    font-size: 2em;
+}

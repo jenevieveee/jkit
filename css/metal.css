@@ -1,0 +1,86 @@
+/* Copyright 2021 AJE https://github.com/jenevieveee */
+
+/* metal skin for bdsmlr */
+/* TODO: add floating avatar to follow scrolling */
+
+body {
+    background-color: #2f4353 !important;
+    background-image: linear-gradient(315deg, #2f4353 0%, #d2ccc4 74%) !important; /* "sex tape" from https://www.eggradients.com/category/metal-gradient */
+    background-size:auto;
+    background-attachment: fixed !important;
+}
+
+.activityunits {
+    padding: 2px;
+    color: #707070;
+    border-bottom: 0px !important;
+}
+.activityunits:hover {
+    background: #304050
+}
+
+.activityunits a {
+    color: #707070;
+}
+.activityunits a:hover {
+    font-weight:bold;
+}
+.avatar,.avatarhead {
+	box-shadow: 0px 0px 6px black;
+}
+.feed.clearfix {
+    padding-top: 5px;
+}
+
+.header {
+    background: inherit;
+    border-bottom: 0px;
+}
+
+.menu {
+	align-items: center;
+	text-shadow: 0 0 1px #202020;
+}
+
+.menu .usermessagenametop {
+    text-shadow: none;
+}
+
+.menu .latestmsg {
+    text-shadow: none;
+}
+
+.news.panel {
+    background-color: #f0f0f0;
+    box-shadow: 0px 0px 6px black;
+}
+.rightbloglist {
+    box-shadow: 0px 0px 6px black;
+    margin-top: 8px;
+}
+.rightwrap, .rightwrap.selectedblog {
+    background-image: linear-gradient(177deg, #404040 0%, #404050 80%, #d0d0d0 90%, #202040 95%, #202020 100%) !important;
+}
+.rightwrap.selectedblog {
+    background-image: linear-gradient(177deg, #707070 0%, #707880 80%, #c0c0c0 90%, #707090 95%, #707070 100%) !important;
+    box-shadow: 0px 0px 10px whitesmoke !important;
+}
+
+.threads {
+    box-shadow: 0px 0px 6px black;
+}
+
+.threadsright {
+    box-shadow: 0px 0px 6px black;
+}
+
+.update {
+    box-shadow: 0px 0px 6px black;
+}
+
+
+#newsup {
+    background-color: #2f4353 !important;
+    background-image: linear-gradient(315deg, #2f4353 0%, #ffffff 30%, #536373 100% ) !important;
+    box-shadow: 0px 0px 6px black;
+}

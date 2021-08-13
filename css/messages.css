@@ -1,0 +1,39 @@
+.latestmsg {
+    grid-column: 2;
+    grid-row: 2;
+    margin-top: 0px !important;
+    white-space: normal !important;
+    padding-left: 5px !important;
+}
+
+.messagethreadtop {
+  padding-bottom:5px;
+  display:grid;
+  grid-template-columns: 45px auto 15px;
+  grid-gap: 5px;
+}
+
+.newmessageicon {
+    grid-column: 3;
+    grid-row: 1;
+}
+.threads {
+    width: 25% !important;
+}
+
+.threadsright {
+    width: 70% !important;
+}
+
+.usermessageimgtop {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+}
+
+.usermessagenametop {
+    max-width:100% !important;
+    width:100% !important;
+    text-align: center;
+}
+
+  

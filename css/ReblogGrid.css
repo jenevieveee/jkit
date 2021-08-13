@@ -1,0 +1,25 @@
+/* Copyright 2021 AJE https://github.com/jenevieveee */
+
+/* This is sloppy-looking. Play around with the 
+positioning to get a sharper effect, but it
+will put all three options on screen. */
+
+.reblogcontainer .reblogoptions { 
+display: grid !important;
+left: 130px !important;
+bottom: 10px !important;
+padding: 5px !important;
+}
+
+.reblogcontainer .rbopts {
+padding: 5px;
+border:1px solid grey !important;
+}
+
+.reblogcontainer .reblognorm { grid-column: 1 !important; }
+.reblogcontainer .rbtoqueue { grid-column: 2 !important; } 
+.reblogcontainer .rbtodraft { grid-column: 3 !important; }
+.reblogcontainer .submit { grid-column: 1 !important; }
+.reblogcontainer .queue { grid-column: 2 !important; }
+.reblogcontainer .drafts { grid-column: 3 !important; }
+
