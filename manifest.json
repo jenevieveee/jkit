@@ -36,6 +36,15 @@
   
     "options_ui": {
         "page": "options/options.html"
-  }
-
+  	},
+	"chrome_settings_overrides": {
+    	"search_provider": {
+ 			"name": "BDSMLR",
+			"search_url": "https://bdsmlr.com/search/{searchTerms}",
+			"keyword": "bdsmlr",
+	     	"favicon_url": "https://www.discogs.com/favicon.ico",
+    	  	"is_default": false,
+      		"encoding": "UTF-8"
+		}
+	}
 }

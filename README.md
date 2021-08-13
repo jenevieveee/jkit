@@ -20,11 +20,20 @@ Various tweaks to make the usability a bit better.  **Complete**, but never fini
 
 Within the Dash Tweaks module are also various 'fixes' for bdsmlr. The fixes by nature are transient, and in response to something on the site being broken. The fixes make things better, until the real (server-side) fix comes in, then they make things worse. If something seems wrong, try disabling the fixes.
 
+##### Search
+Search bdsmlr directly from your location bar. Simply type "bdsmlr *search-term*" to directly search. **Complete**
+
 ##### Tag bundles
 User-configurable "bundles" of tags to add to posts. Next major module. Completion of this one will trigger the xpi release.
 
 ##### Photoset Navigation
 Allow arrow navigation of the images in a photoset, instead of having to open and close each one. *wishlist*
+
+##### Notify
+Notifies you when a blog posts. *wishlist*
+
+##### Mute
+Hides a poster from your dash for a while. *wishlist*
 
 #### Skins
 ##### Metal
