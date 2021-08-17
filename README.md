@@ -5,7 +5,7 @@ X-Kit was great for tumblr. X-Kit was missing from BDSMLR.
 
 Now we have the J-Kit project. The aim is not a replacement-in-kind for X-Kit, but to create the features that BDSMLR needs.
 
-Right now, it's only published in source form for testing. Once the basic product is complete, a signed xpi will go up for Firefox.
+Right now, it's published in source form or unsigned xpi for testing. A signed xpi will be coming soo, but until then JKit can only be loaded on a temporary basis.
 
 ## Modules 
 There are several different modules and categories of enhancements. Ones marked **Complete** are functional; otherwise that module is just planned for a future release. 
