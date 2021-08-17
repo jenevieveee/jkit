@@ -1,0 +1,166 @@
+/* Copyright 2021 AJE https://github.com/jenevieveee */
+
+/* metal skin for bdsmlr */
+/* TODO: add floating avatar to follow scrolling */
+
+body {
+    background-color: #f9d1b7 !important;
+    background-image: linear-gradient(315deg, #fc94c4 0%, #f0f0f0 74%) !important;
+    background-size:auto;
+    background-attachment: fixed !important;
+}
+
+.activityunits {
+    padding: 2px;
+    color: #ffd8d8;
+    border-bottom: 0px !important;
+}
+.activityunits:hover {
+    background: #fff0cc;
+}
+
+.activityunits a {
+    color: #707070;
+}
+.activityunits a:hover {
+    font-weight:bold;
+}
+.activityunits .fa-retweet::before {
+    content: "💫";
+    background: white;
+   	text-shadow: 0 0 1px #aa0000;
+}
+
+.aside b {
+    color: rgba(64, 0, 192, 0.5)
+}
+
+.avatar,.avatarhead {
+	box-shadow: 0px 0px 6px violet;
+}
+
+.fa-cog::before {
+    content: "⚙" !important;
+}
+
+.fa-comment::before {
+    content: "💭" !important;
+    text-shadow: 0 0 1px #aa0000;
+}
+
+.fa-heart::before {
+    content: "💕" !important;
+}
+.fa-plus-circle::before {
+    content: "🎉" !important;
+}
+.fa-retweet::before {
+    content: "💫";
+    background: rgba(0,0,0,0) ;
+   	text-shadow: 0 0 1px #aa0000;
+}
+.fa-tags::before {
+    content: "🏷️" !important;
+}
+
+
+.feed.clearfix {
+    padding-top: 5px;
+}
+
+.followicon {
+    background:white;
+    color:white;
+}
+
+.header {
+    background: inherit;
+    border-bottom: 0px;
+}
+.likedheart {
+    background: white;
+    color: white;
+}
+.menu {
+	align-items: center;
+	text-shadow: 0 0 1px #aa0000;
+}
+
+.menu .commentpreview {
+    text-shadow: none;
+}
+.menu .latestmsg {
+    text-shadow: none;
+}
+.menu .nameact {
+    text-shadow: none;
+}
+.menu .singlecommenttop {
+    text-shadow: none;
+}
+.menu .usermessagenametop {
+    text-shadow: none;
+}
+
+.newcomments {
+    border: 1px dotted black;
+    padding: 5px;
+}
+
+.news.panel {
+    background-color: rgba(0,0,0,0) !important;
+    /* box-shadow: 0px 0px 6px violet; */
+}
+
+.post_info {
+    text-align: center;
+}
+
+.post_info a {
+    font-size: 2em !important;
+    text-decoration: underline overline #FF3028;
+}
+.post_info a::after {
+    content: " 💖";
+}
+.post_info a::before {
+    content: "👑 ";
+}
+
+
+
+.rightbloglist {
+    box-shadow: 0px 0px 6px violet;
+    margin-top: 8px;
+}
+
+.rightwrap b {
+    color: darkmagenta;
+}
+
+.rightwrap, .rightwrap.selectedblog {
+    background-image: linear-gradient(177deg, #f9d1b7 0%, #f894a4 74%) !important;
+}
+.rightwrap.selectedblog {
+    background-image: linear-gradient(177deg, #f9d1b7 0%, #f894a4 74%) !important;
+    box-shadow: 0px 0px 10px grey !important;
+}
+
+.threads {
+    box-shadow: 0px 0px 6px violet;
+}
+
+.threadsright {
+    box-shadow: 0px 0px 6px violet;
+}
+
+.update {
+    box-shadow: 0px 0px 6px violet;
+}
+
+
+#newsup {
+    background-color: rgba(0,0,0,0) !important;
+    /*background-image: linear-gradient(145deg, #f0f0f0 0%, #f0f0f0 25%, #f894a4 50%, #f0f0f0 75%) !important;*/
+    /*box-shadow: 0px 0px 6px violet;*/
+}

@@ -6,14 +6,20 @@
     "homepage_url": "https://github.com/jenevieveee/jkit",
 
     "content_scripts": [{
-        "js": ["scripts/storage.js",  
+        "js": [
                 "scripts/common.js", 
+                "scripts/storage.js",  
                 "scripts/dashtweaks.js", 
                 "scripts/boss.js", 
                 "scripts/cum.js", 
-                "scripts/skin.js"],
+                "scripts/skin.js",
+                "scripts/tags_context.js"
+                ],
         "matches": [ "*://*.bdsmlr.com/*" ]
     }],
+    "background": {
+        "scripts": ["scripts/tags.js"]
+    },
 
     "icons": {
         "96": "icons/jkit.png"
@@ -22,7 +28,8 @@
     "permissions": [
         "*://*.bdsmlr.com/*",
         "storage",
-        "activeTab"
+        "activeTab",
+        "contextMenus"
     ],
 
     "web_accessible_resources": [
@@ -47,3 +54,4 @@
 		}
 	}
 }
+    

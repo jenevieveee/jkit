@@ -27,10 +27,11 @@ const messagesLayoutInput = document.querySelector("#MessagesLayout");
 
 //JKit-skin: Skins
 const skinDefaultInput = document.querySelector("#SkinChoiceDefault");
-//const skinPrincessInput = document.querySelector("#SkinChoicePrincess");
+const skinPrincessInput = document.querySelector("#SkinChoicePrincess");
 const skinMetalInput = document.querySelector("#SkinChoiceMetal");
 const overrideBlogInput = document.querySelector("#OverrideBlog");
 
+//save
 const saveInput = document.querySelector("#SaveInput");
 
 saveInput.addEventListener("click", storeSettings);
@@ -69,9 +70,13 @@ function storeSettings() {
         skinsettings: {
             skindefault: skinDefaultInput.checked,
             skinmetal: skinMetalInput.checked,
-            //skinprincess: skinPrincessInput.checked,
+            skinprincess: skinPrincessInput.checked,
             overrideblog: overrideBlogInput.checked
+        },
+        tagssettings: {
+            tagsactive: false //tagBundlesActiveInput.checked
         }
+        
     } );
     console.log("Done saving");
 }
@@ -110,8 +115,11 @@ function updateUI(results) {
     skinMetalInput.checked = results.skinsettings.skinmetal || false;
     // TODO: skinPrincessInput.checked = results.skinsettings.skinprincess || false;
     overrideBlogInput.checked = results.skinsettings.overrideblog || false;
+    
+  // Tag Buttons
+    //tagBundlesActiveInput.checked = results.tagssettings.tagsactive || false;
 }
 
 function onError(e) {
-    console.error(e);
+    console.error( " Settins Error: " + e);
 }

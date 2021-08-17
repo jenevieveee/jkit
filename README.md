@@ -21,10 +21,10 @@ Various tweaks to make the usability a bit better.  **Complete**, but never fini
 Within the Dash Tweaks module are also various 'fixes' for bdsmlr. The fixes by nature are transient, and in response to something on the site being broken. The fixes make things better, until the real (server-side) fix comes in, then they make things worse. If something seems wrong, try disabling the fixes.
 
 ##### Search
-Search bdsmlr directly from your location bar. Simply type "bdsmlr *search-term*" to directly search. **Complete**
+Search bdsmlr directly from your browser's location bar. Simply type "bdsmlr *search-term*" to directly search. **Complete**
 
 ##### Tag bundles
-User-configurable "bundles" of tags to add to posts. Next major module. Completion of this one will trigger the xpi release.
+User-configurable "bundles" of tags to add to posts. **Complete**
 
 ##### Photoset Navigation
 Allow arrow navigation of the images in a photoset, instead of having to open and close each one. *wishlist*
@@ -39,7 +39,7 @@ Hides a poster from your dash for a while. *wishlist*
 ##### Metal
 Metalic-inspired skin for the dash. **Complete**
 ##### Princess
-Princess-inspired skin for the dash. *planned*
+Princess-inspired skin for the dash. **Complete**
 
 #### Kink Add-ons
 
@@ -56,7 +56,7 @@ Covers your screen in cum.  **Complete.**
 * non-deletable captions
 * mute button
 * Add block button to hover
-* Dark mode skin
+* Additional Skins
 * Any other ideas?
 
 ## Name
@@ -71,7 +71,6 @@ Be sure to also check out alternate themes for your blog at [BDSMLR-Themes](http
 ## Ad block
 I can write an ad-blocker for bdsmlr and incorporate it into the add-on (like XKit's anti-capitalism module), but I'm not going to. Don't ask.  If you don't like the ads, see [BDSMLR Subscriptions](https://bdsmlr.com/subscriptions). 
 
-**IF** I can figure out how the site tells subscribed users from non-subscribed users on the front-end (I haven't looked too hard), I will try to add one to block the once-daily and archives pop-ups. Because they shouldn't be there in the first place if you are a subscribed user.
 
 ## Contribute
 ### Ideas and requests
@@ -81,7 +80,7 @@ If you have an idea or request, please feel free to submit it via the issues tab
 If you want to write a module, I welcome any contributions.
 
 ### Chrome
-I have not tested on Chrome. Per the docs, the browser.extension.getURL() method works differently. This may break functionality, but it may just work, particularly with the skins and the tweaks. My priority is Firefox/moz first. Once I'm satisfied with the add-on, I'll look into making it work with Chrome/webkit. If someone else wants to do that first, I'd be more than happy to merge it in.
+I have not tested on Chrome. My priority is Firefox/moz first. Once I'm satisfied with the add-on and ready for a beta release, I'll look into making it work with Chrome/webkit. If someone else wants to do that first, I'd be more than happy to merge it in.
 
 ### Thanks
 If you just want to say thanks, consider making a small gift:

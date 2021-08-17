@@ -42,13 +42,23 @@ body {
 	text-shadow: 0 0 1px #202020;
 }
 
+.menu .commentpreview {
+    text-shadow: none;
+}
+.menu .latestmsg {
+    text-shadow: none;
+}
+.menu .nameact {
+    text-shadow: none;
+}
+.menu .singlecommenttop {
+    text-shadow: none;
+}
 .menu .usermessagenametop {
     text-shadow: none;
 }
 
-.menu .latestmsg {
-    text-shadow: none;
-}
+
 
 .news.panel {
     background-color: #f0f0f0;

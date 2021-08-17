@@ -33,6 +33,10 @@ var skinsettings = {
     ,overrideblog: false
 };
 
+var tagssettings = {
+	tagsactive: false
+};
+
 console.log(" JKit - Getting previously stored JKit settings" );
 const gettingStoredSettings = browser.storage.local.get();
 gettingStoredSettings.then(checkStoredSettings, onError);
@@ -59,5 +63,8 @@ function checkStoredSettings(storedSettings) {
     }
     if (!storedSettings.skinsettings) {
         browser.storage.local.set({skinsettings});
+    }
+    if (!storedSettings.tagssettings) {
+        browser.storage.local.set({tagssettings});
     }
 }
