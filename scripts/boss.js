@@ -40,6 +40,6 @@ function hideMe() {
 
 function resetTimer_boss() {
     clearTimeout(time_boss);
-    time = setTimeout(hideMe, iBossScreenTimeout * 1000 * 60 );
+    time_boss = setTimeout(hideMe, iBossScreenTimeout * 1000 * 60 );
 }
 
