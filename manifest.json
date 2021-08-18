@@ -22,7 +22,7 @@
     },
 
     "icons": {
-        "96": "icons/jkit.png"
+        "48": "icons/jkit.png"
     },
 
     "permissions": [

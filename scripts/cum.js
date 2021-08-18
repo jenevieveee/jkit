@@ -26,7 +26,7 @@ function setTimer_cum() {
 function show_cum() {
    let seq = Math.floor( Math.random() * 5 ); // One of 5 images TODO: Add more
    let urlt = "img/cum/splat" + seq + ".png";
-   let urls = browser.extension.getURL( urlt );
+   let urls = browser.runtime.getURL( urlt );
    cumImage = document.createElement("img");
    cumImage.setAttribute("src", urls );
    cumImage.style.height = "auto";

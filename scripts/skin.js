@@ -45,12 +45,12 @@ function loadCSS_skin( results ) {
         return;
     }
     else if (bSkinMetal) {
-        path = browser.extension.getURL( "/css/metal.css" );
-        bannerpath = browser.extension.getURL( "/img/skins/gunmetal.png" );
+        path = browser.runtime.getURL( "/css/metal.css" );
+        bannerpath = browser.runtime.getURL( "/img/skins/gunmetal.png" );
     }
     else if (bSkinPrincess) {
-        path = browser.extension.getURL( "/css/princess.css" );
-        bannerpath = browser.extension.getURL( "/img/skins/princess.png" );
+        path = browser.runtime.getURL( "/css/princess.css" );
+        bannerpath = browser.runtime.getURL( "/img/skins/princess.png" );
     }	
 
 	let link = document.createElement('link');

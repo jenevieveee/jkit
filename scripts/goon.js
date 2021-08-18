@@ -27,7 +27,7 @@ function load_goon( results) {
 function show_goon() {
    let seq = Math.floor( Math.random() * 15 ) + 1; 
    let urlt = "img/goon/g" + seq + ".gif";
-   let urls = browser.extension.getURL( urlt );
+   let urls = browser.runtime.getURL( urlt );
 
    remove_goon();
    let goonImage = document.createElement("img");
@@ -50,9 +50,9 @@ function show_sissy() {
     let urlt = "img/sissy/s" + seq + ".jpg";
    }
    else {
-       let urlt = "img/sissy/s" + seq + ".gif";
+      let urlt = "img/sissy/s" + seq + ".gif";
    }
-      let urls = browser.extension.getURL( urlt );
+      let urls = browser.runtime.getURL( urlt );
 
    remove_sissy();
    let sissyImage = document.createElement("img");
