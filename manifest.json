@@ -7,6 +7,7 @@
 
     "content_scripts": [{
         "js": [
+				"scripts/browser-polyfill.js",
                 "scripts/common.js", 
                 "scripts/storage.js",  
                 "scripts/dashtweaks.js", 
@@ -18,7 +19,10 @@
         "matches": [ "*://*.bdsmlr.com/*" ]
     }],
     "background": {
-        "scripts": ["scripts/tags.js"]
+        "scripts": [
+					"scripts/browser-polyfill.js",
+					"scripts/tags.js"
+					]
     },
 
     "icons": {
@@ -38,7 +42,8 @@
         "img/goon/*.gif",
         "img/cum/*.png",
         "img/sissy/*.gif",
-        "img/sissy/*.jpg"
+        "img/sissy/*.jpg",
+		"img/skins/*.png" 
     ],
   
     "options_ui": {

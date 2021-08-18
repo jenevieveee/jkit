@@ -20,7 +20,7 @@ function addTagsToElement( request ) {
     // console.log( "Got message: " + request );
     
     bundleId = request.tagbundle;
-    let tagit_arr = document.getElementsByClassName("tagit-new");
+    let tagit_arr = document.getElementById("Tags").getElementsByClassName("tagit-new");
     let tagit_input = tagit_arr[0].firstChild;
     
     //Extra commas don't hurt
