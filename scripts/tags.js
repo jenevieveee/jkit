@@ -12,7 +12,11 @@ tagssettingsPromise.then( createTagsMenu, onBgTagsError );
 browser.storage.onChanged.addListener( updateTagsMenu );
 
 function createTagsMenu( results ) {
-    browser.contextMenus.remove( "TagBundlesMenu" );
+	// We need this happen in-order, so the remove  calls to create in
+	// either the success or failure cases.
+    browser.contextMenus.remove( "TagBundlesMenu" ).then( () => { createTagsMenu2( results ); }).catch( () => { createTagsMenu2(results); } );
+}
+function createTagsMenu2( results ) {
     if ( results.tagssettings && results.tagssettings.tagsactive ) {
         browser.contextMenus.create( {
             id: "TagBundlesMenu",

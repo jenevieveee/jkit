@@ -23,6 +23,7 @@ var dashsettings = {
     rebloggrid: false,
     shortenposts: false,
     noappnotice: false,
+	searchfocus: false,
     
     fixcdn05: false,
     fixactivity: false,
@@ -46,6 +47,7 @@ function loadCSS_dash( results ) {
     bReblogGrid = results.dashsettings.rebloggrid;
     bShortenPosts = results.dashsettings.shortenposts;
     bNoAppNotice = results.dashsettings.noappnotice;
+	bSearchFocus = results.dashsettings.searchfocus;
     
     bFixCdn05 = results.dashsettings.fixcdn05;
     bFixActivity = results.dashsettings.fixactivity;
@@ -59,6 +61,8 @@ function loadCSS_dash( results ) {
 	if ( bReblogGrid == true ) setDashTweak( head, "css/ReblogGrid.css" );
     if ( bShortenPosts == true ) setDashTweak( head, "css/ShortenPosts.css" );
     if ( bNoAppNotice == true ) setDashTweak( head, "css/AppNotice.css" );
+
+	if ( bSearchFocus == true ) setSearchFocus();
     
     // Fixes
     if ( bFixCdn05 == true ) fixCdn05();
@@ -130,4 +134,17 @@ function updateSdataListeners() {
             // check for scroll-down/data refresh
             setTimeout( updateSdataListeners, 2000 );
         }
+}
+
+function setSearchFocus() {
+	magglass = document.getElementsByClassName("far fa-search");
+	// The timeout is to ensure that the un-hide happens first, so the element is focus-able.
+	if ( magglass && magglass[0] ) {
+		magglass[0].addEventListener("click", function() { setTimeout( setSearchFocus2, 200 );} );
+	}
+}
+
+function setSearchFocus2() {
+	searchInput = document.getElementById("searchtext");
+	searchInput.focus(); 
 }
