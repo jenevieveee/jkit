@@ -78,9 +78,6 @@ function storeSettings() {
             skinmetal: skinMetalInput.checked,
             skinprincess: skinPrincessInput.checked,
             overrideblog: overrideBlogInput.checked
-        },
-        tagssettings: {
-            tagsactive: false //tagBundlesActiveInput.checked
         }
         
     } );
@@ -123,8 +120,6 @@ function updateUI(results) {
     // TODO: skinPrincessInput.checked = results.skinsettings.skinprincess || false;
     overrideBlogInput.checked = results.skinsettings.overrideblog || false;
     
-  // Tag Buttons
-    //tagBundlesActiveInput.checked = results.tagssettings.tagsactive || false;
 }
 
 function onError(e) {
