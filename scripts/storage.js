@@ -16,6 +16,7 @@ var dashsettings = {
     ,rebloggrid: false
     ,shortenposts: false
     ,messageslayout: false
+	,searchfocus: false
     ,fixcdn05: false
     ,fixactivity: false
     ,noappnotice: false

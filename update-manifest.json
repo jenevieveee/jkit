@@ -1,0 +1,13 @@
+{
+	"addons": {
+		"jkit-master": {
+			"updates": [
+				{
+					"version": "0.1",
+					"update_link": "https://github.com/jenevieveee/jkit/releases/download/v0.1-signed/jkit-0.1-fx.xpi"
+				}
+			]
+		}
+	}
+}
+		

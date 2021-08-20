@@ -14,6 +14,7 @@ const reblogOnBottomInput = document.querySelector("#ReblogOnBottom");
 const reblogGridInput = document.querySelector("#ReblogGrid");
 const shortenPostsInput = document.querySelector("#ShortenPosts");
 const appNoticeInput = document.querySelector("#AppNotice");
+const searchFocusInput = document.querySelector("#SearchFocus");
 
 const fixCdn05Input = document.querySelector("#FixCdn05");
 const fixActivityInput = document.querySelector("#FixActivity");
@@ -36,9 +37,13 @@ const saveInput = document.querySelector("#SaveInput");
 
 saveInput.addEventListener("click", storeSettings);
 
-/* On opening the options page, fetch stored settings and update the UI with them. */
-const gettingStoredSettings = browser.storage.local.get();
-gettingStoredSettings.then(updateUI, onError);
+// Because Chrome is slow AF, the pre-load of storage won't complete until after the
+// get, so relax for a few ticks.
+setTimeout( function () {
+	/* On opening the options page, fetch stored settings and update the UI with them. */
+	const gettingStoredSettingsOpt = browser.storage.local.get();
+	gettingStoredSettingsOpt.then(updateUI, onError);
+}, 100 );
 
 function storeSettings() {
     console.log("Saving dash tweaks settings");
@@ -57,6 +62,7 @@ function storeSettings() {
             rebloggrid: reblogGridInput.checked,
             shortenposts: shortenPostsInput.checked,
             noappnotice: appNoticeInput.checked,
+			searchfocus: searchFocusInput.checked,
       
             fixcdn05: fixCdn05Input.checked,
             fixactivity: fixActivityInput.checked,
@@ -100,6 +106,7 @@ function updateUI(results) {
     reblogGridInput.checked = results.dashsettings.rebloggrid || false;
     shortenPostsInput.checked = results.dashsettings.shortenposts || false;
     appNoticeInput.checked = results.dashsettings.noappnotice || false;
+    searchFocusInput.checked = results.dashsettings.searchfocus || false;
   
     fixCdn05Input.checked = results.dashsettings.fixcdn05 || false;
     fixActivityInput.checked = results.dashsettings.fixactivity || false;
