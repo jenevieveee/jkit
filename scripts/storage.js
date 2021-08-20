@@ -27,6 +27,11 @@ var goonsettings = {
     ,sissyactive: false
 };
 
+var mutesettings = {
+	muteactive: false
+	,mutetimeout: 30
+};
+
 var skinsettings = {
     skindefault: true
     ,skinmetal: false
@@ -67,5 +72,8 @@ function checkStoredSettings(storedSettings) {
     }
     if (!storedSettings.tagssettings) {
         browser.storage.local.set({tagssettings});
+    }
+    if (!storedSettings.mutesettings) {
+        browser.storage.local.set({mutesettings});
     }
 }

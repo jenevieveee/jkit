@@ -32,6 +32,10 @@ const skinPrincessInput = document.querySelector("#SkinChoicePrincess");
 const skinMetalInput = document.querySelector("#SkinChoiceMetal");
 const overrideBlogInput = document.querySelector("#OverrideBlog");
 
+//Mute
+const muteActiveInput = document.querySelector("#MuteActive");
+const muteTimeoutInput = document.querySelector("#MuteTimeout");
+
 //save
 const saveInput = document.querySelector("#SaveInput");
 
@@ -79,9 +83,10 @@ function storeSettings() {
             skinprincess: skinPrincessInput.checked,
             overrideblog: overrideBlogInput.checked
         },
-        tagssettings: {
-            tagsactive: false //tagBundlesActiveInput.checked
-        }
+		mutesettings: {
+			muteactive: false;
+			mutetimeout: 30;
+		}
         
     } );
     console.log("Done saving");
@@ -123,8 +128,9 @@ function updateUI(results) {
     // TODO: skinPrincessInput.checked = results.skinsettings.skinprincess || false;
     overrideBlogInput.checked = results.skinsettings.overrideblog || false;
     
-  // Tag Buttons
-    //tagBundlesActiveInput.checked = results.tagssettings.tagsactive || false;
+    muteActiveInput.checked = results.mutesettings.muteactive || false;
+    muteTimeoutInput.value = results.mutesettings.mutetimeout || 10;
+  
 }
 
 function onError(e) {
