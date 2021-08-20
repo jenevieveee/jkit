@@ -4,7 +4,6 @@
     "name": "jkit",
     "version": "0.1",
     "homepage_url": "https://github.com/jenevieveee/jkit",
-
     "content_scripts": [{
         "js": [
 				"scripts/browser-polyfill.js",
@@ -48,6 +47,14 @@
   
     "options_ui": {
         "page": "options/options.html"
+	},
+	
+	"browser_specific_settings": {
+		"gecko": {
+			"id": "JKit-master-firefox",
+			"strict_min_version": "42.0",
+			"update_url": "https://github.com/jenevieveee/jkit/blob/master/update-manifest.json"
+		}
 	},
 	"chrome_settings_overrides": {
 		"search_provider": {
