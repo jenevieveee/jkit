@@ -16,6 +16,7 @@ var dashsettings = {
     ,rebloggrid: false
     ,shortenposts: false
     ,messageslayout: false
+	,searchfocus: false
     ,fixcdn05: false
     ,fixactivity: false
     ,noappnotice: false
@@ -24,6 +25,11 @@ var dashsettings = {
 var goonsettings = {
     goonactive: false
     ,sissyactive: false
+};
+
+var mutesettings = {
+	muteactive: false
+	,mutetimeout: 30
 };
 
 var skinsettings = {
@@ -40,11 +46,6 @@ var tagssettings = {
 console.log(" JKit - Getting previously stored JKit settings" );
 const gettingStoredSettings = browser.storage.local.get();
 gettingStoredSettings.then(checkStoredSettings, onError);
-
-/* Generic error logger. */
-function onError(e) {
-    console.error(e);
-}
 
 /* On startup, check whether we have stored settings.
 If we don't, then store the default settings. */
@@ -66,5 +67,8 @@ function checkStoredSettings(storedSettings) {
     }
     if (!storedSettings.tagssettings) {
         browser.storage.local.set({tagssettings});
+    }
+    if (!storedSettings.mutesettings) {
+        browser.storage.local.set({mutesettings});
     }
 }

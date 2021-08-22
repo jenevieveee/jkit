@@ -19,18 +19,21 @@
        <input id="BossScreenTimeout" type="text" name="BossScreenTimeout" value="10" style="width: 4em"><label for="BossScreenTimeout">Timeout in minutes</label><br>
     </section>
     <hr>
-    <section class="Dash Tweaks">
-        <div class="title" >Dash Tweaks</div>
+    <section class="Tweaks">
         <div class="optdesc">Various tweaks to the dash to make life easier. </div>
+        <div class="title" >Dash Tweaks</div>
       
         <input id="BigReblog" type="checkbox" name="BigReblog"/><label for="BigReblog">Bigger Reblog Button. Affects all views.</label> <br>
         <input id="ReblogOnBottom" type="checkbox" name="ReblogOnBottom"/><label for="ReblogOnBottom">Reblog to Blog on Bottom</label><br>
         <input id="ReblogGrid" type="checkbox" name="ReblogGrid"/> <label for="ReblogGrid">Set the Reblog/Queue/Drafts into a grid instead of a dropdown</label><br>
-        <input id="ShortenPosts" type="checkbox" name="ShortenPosts"/><label for="ShortenPosts">Shorten long posts when viewing 3 column or responsive blogs. Prevents a single post from flowing too far down. Permalink view is unaffected, if you want to see the entire post.</label><br>
+        <input id="ShortenPosts" type="checkbox" name="ShortenPosts"/><label for="ShortenPosts">Shorten long posts. Prevents a single post from flowing too far down. Permalink view is unaffected, if you want to see the entire post. Affects all other views.</label><br>
         <input id="AppNotice" type="checkbox" name="AppNotice"/><label for="AppNotice">Hide the App Notice</label><br>
-        
+       
+		<div class="title">Messages Tweaks</div> 
         <input id="MessagesLayout" type="checkbox" name="MessagesLayout"/> <label for="MessagesLayout">Improves the look of the /messages page. No more blog names over the message preview.</label><br>
-      
+      	<div class="title">Blog Tweaks</div>
+        <input id="SearchFocus" type="checkbox" name="SearchFocus"/> <label for="SearchFocus">Sets the cursor focus on the search box for blog searches</label><br>
+        <div class="title" >Fixes</div>
         <div class="optdesc">
             Misc fixes for broken BDSMLR stuff. These may suddenly stop working. Generally, they make the experience better, until the problem is actually fixed sever side, then they make the problem worse. These options will be removed when the actual fix is made.
          </div>
@@ -53,6 +56,13 @@
         <div class="optdesc">Tags are on the <a href="tags.html">Tags</a> page.</div>
     </section>
     <hr>
+    <section class="Mute">
+        <div class="title">Mute</div>
+        <div class="optdesc">Hides a user from your dash for a while, without unfollowing them.</div>
+       <input id="MuteActive" type="checkbox" name="MuteActive"/><label for="MuteActive">Enable Muting</label><br>
+       <input id="MuteTimeout" type="text" name="MuteTimeout" value="30" style="width: 4em"><label for="MuteTimeout">Mute time in minutes</label><br>
+    </section>
+	
 <!-- removed for now because posting the images violates github ToS -->
 <!--
     <h1>Kinks</h1>
@@ -74,6 +84,7 @@
     <hr>
     <button id="SaveInput" type="button" name="SaveInput" style="width: 20em; margin:auto; text-align:center;">Save</button>
     <script src="../scripts/browser-polyfill.js"></script>
+    <script src="../scripts/storage.js"></script>
     <script src="options.js"></script>
   </body>
 

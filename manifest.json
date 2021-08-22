@@ -2,33 +2,23 @@
     "description": "JKit -- Enhancements for BDSMLR",
     "manifest_version": 2,
     "name": "jkit",
-    "version": "0.1",
+    "version": "0.2",
     "homepage_url": "https://github.com/jenevieveee/jkit",
-	"browser_specific_settings": {
-		"gecko": {
-			"id": "addon@example.com",
-			"strict_min_version": "42.0",
-			"update_url": "https://github.com/jenevieveee/jkit/blob/master/update-manifest.json"
-		}
-	},
-	"update_url": "https://github.com/jenevieveee/jkit/blob/master/update-manifest.xml",
-
     "content_scripts": [{
         "js": [
-				"scripts/browser-polyfill.js",
                 "scripts/common.js", 
                 "scripts/storage.js",  
                 "scripts/dashtweaks.js", 
                 "scripts/boss.js", 
                 "scripts/cum.js", 
                 "scripts/skin.js",
-                "scripts/tags_context.js"
+                "scripts/tags_context.js",
+                "scripts/mute.js"
                 ],
         "matches": [ "*://*.bdsmlr.com/*" ]
     }],
     "background": {
         "scripts": [
-					"scripts/browser-polyfill.js",
 					"scripts/tags.js"
 					]
     },
@@ -56,15 +46,7 @@
   
     "options_ui": {
         "page": "options/options.html"
-	},
-	"chrome_settings_overrides": {
-		"search_provider": {
-			"name": "BDSMLR",
-			"search_url": "https://bdsmlr.com/search/{searchTerms}",
-			"keyword": "bdsmlr",
-			"is_default": false,
-			"encoding": "UTF-8"
-		}
 	}
+	
 }
     
