@@ -4,6 +4,14 @@
     "name": "jkit",
     "version": "0.1",
     "homepage_url": "https://github.com/jenevieveee/jkit",
+	"browser_specific_settings": {
+		"gecko": {
+			"id": "addon@example.com",
+			"strict_min_version": "42.0",
+			"update_url": "https://github.com/jenevieveee/jkit/blob/master/update-manifest.json"
+		}
+	},
+	"update_url": "https://github.com/jenevieveee/jkit/blob/master/update-manifest.xml",
 
     "content_scripts": [{
         "js": [
