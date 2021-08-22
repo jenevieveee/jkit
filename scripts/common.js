@@ -10,6 +10,11 @@ function onGetSettingsError( error ) {
   console.log(`Error fetching settings: ${error}`);
 }
 
+/* Generic error logger. */
+function onError(e) {
+	console.error(e);
+}
+
 /** Loads options set, then calls handler
  * @param settingsName -- settings key to get 
  * @param jkit_callback -- callback to take results from local storage
@@ -31,3 +36,9 @@ function setRandomMinuteTimer_jkit( low, high, jkit_callback ) {
    minuteTimerValue = minuteTimerValue * 1000; // ms to s.
    setTimeout( jkit_callback, minuteTimerValue );
 }
+
+function unixtime() {
+	let ts = Math.round((new Date()).getTime() / 1000);
+	return ts;
+}
+

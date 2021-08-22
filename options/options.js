@@ -84,8 +84,8 @@ function storeSettings() {
             overrideblog: overrideBlogInput.checked
         },
 		mutesettings: {
-			muteactive: false;
-			mutetimeout: 30;
+			muteactive: muteActiveInput.checked,
+			mutetimeout: 30
 		}
         
     } );
@@ -125,7 +125,7 @@ function updateUI(results) {
   // Skin buttons
     skinDefaultInput.checked = results.skinsettings.skindefault || true;
     skinMetalInput.checked = results.skinsettings.skinmetal || false;
-    // TODO: skinPrincessInput.checked = results.skinsettings.skinprincess || false;
+    skinPrincessInput.checked = results.skinsettings.skinprincess || false;
     overrideBlogInput.checked = results.skinsettings.overrideblog || false;
     
     muteActiveInput.checked = results.mutesettings.muteactive || false;
