@@ -13,7 +13,8 @@
                 "scripts/boss.js", 
                 "scripts/cum.js", 
                 "scripts/skin.js",
-                "scripts/tags_context.js"
+                "scripts/tags_context.js",
+                "scripts/mute.js"
                 ],
         "matches": [ "*://*.bdsmlr.com/*" ]
     }],
@@ -51,8 +52,7 @@
 	
 	"browser_specific_settings": {
 		"gecko": {
-			"id": "JKit-master-firefox",
-			"strict_min_version": "42.0",
+			"strict_min_version": "65.0",
 			"update_url": "https://github.com/jenevieveee/jkit/blob/master/update-manifest.json"
 		}
 	},
