@@ -83,11 +83,10 @@ function storeSettings() {
             skinprincess: skinPrincessInput.checked,
             overrideblog: overrideBlogInput.checked
         },
-		mutesettings: {
-			muteactive: muteActiveInput.checked,
-			mutetimeout: 30
-		}
-        
+		    mutesettings: {
+			    muteactive: muteActiveInput.checked,
+			    mutetimeout: 30
+        }        
     } );
     console.log("Done saving");
 }
@@ -130,7 +129,6 @@ function updateUI(results) {
     
     muteActiveInput.checked = results.mutesettings.muteactive || false;
     muteTimeoutInput.value = results.mutesettings.mutetimeout || 10;
-  
 }
 
 function onError(e) {

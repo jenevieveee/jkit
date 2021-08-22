@@ -83,7 +83,24 @@ If you have an idea or request, please feel free to submit it via the issues tab
 If you want to write a module, I welcome any contributions.
 
 ### Chrome
-I have not tested on Chrome. My priority is Firefox/moz first. Once I'm satisfied with the add-on and ready for a beta release, I'll look into making it work with Chrome/webkit. If someone else wants to do that first, I'd be more than happy to merge it in.
+JKit works in Chrome if yu load the source in developer mode. However, 
+Chrome does not allow installation of extensions from anywhere but the Chrome
+Web Store, and they do not allow adult apps in the Web Store.
+
+I will be posting detailed instructions, along with a batch installer script to
+make running on Chrome as easy as possible.
+
+If you can't wait for more detailed instructions, download the full source
+(click on Releases, then get the latest zip file), unzip to C:\JKit, then
+go to the extensions page in Chrome. Enable developer mode, click the "Load
+Unpacked" button, and select C:\JKit as the folder. JKit will load, and it
+will remain loaded through restarts.
+
+### Opera, Edge
+Edge is not supported at all at this time.
+
+JKit may work with Opera; I have not tested it. The install process should
+be similar to Chrome.
 
 ### Thanks
 If you just want to say thanks, consider making a small gift:
