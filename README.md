@@ -36,7 +36,7 @@ Allow arrow navigation of the images in a photoset, instead of having to open an
 Notifies you when a blog posts. *wishlist*
 
 ##### Mute
-Hides a poster from your dash for a while. *wishlist*
+Hides a poster from your dash for a while. **Complete**
 
 #### Skins
 ##### Metal
@@ -57,7 +57,6 @@ Covers your screen in cum.  **Complete.**
 
 #### Future
 * non-deletable captions
-* mute button
 * Add block button to hover
 * Additional Skins
 * Any other ideas?
