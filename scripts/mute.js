@@ -149,6 +149,9 @@ function hideUsers( results, bRecall ) {
 	if (results == null && bRecall == true ) {
 		setTimeout( hideUsers( null, false ), 1000 ); //recheck in 1s
 	}
+	// Sometimes, the hide doesn't get invoked until after the data load, before the next scroll event 
+	// can register; you'll still see the posts. So reinvoke a second time just in case
+	setTimeout( function () { hideUsers( results, true ); }, 2000 );
 	// don't unhide existing mutesettings
 	let mutedUserIds = Object.keys( results.mutesettings);
 	let panels = document.getElementsByClassName("feed clearfix");

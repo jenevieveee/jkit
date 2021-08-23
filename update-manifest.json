@@ -9,6 +9,10 @@
 				{
 					"version": "0.2",
 					"update_link": "https://github.com/jenevieveee/jkit/releases/download/v0.2/jkit-0.2-fx.xpi"
+				},
+				{
+					"version": "0.2.1",
+					"update_link": "https://github.com/jenevieveee/jkit/releases/download/v0.2.1/jkit-0.2.1-fx.xpi"
 				}
 			]
 		}
