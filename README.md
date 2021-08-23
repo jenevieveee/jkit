@@ -82,18 +82,18 @@ If you have an idea or request, please feel free to submit it via the issues tab
 If you want to write a module, I welcome any contributions.
 
 ### Chrome
-JKit works in Chrome if yu load the source in developer mode. However, 
-Chrome does not allow installation of extensions from anywhere but the Chrome
-Web Store, and they do not allow adult apps in the Web Store.
+I have submitted a JKit port to google. Their review process is manual, and
+it may take a while. They may or may not accept the submission. I will post a
+link to the Web Store if/when they do.
 
-I will be posting detailed instructions, along with a batch installer script to
-make running on Chrome as easy as possible.
+JKit works in Chrome if you load the chrome branch in developer mode. I will be 
+posting detailed instructions, along with a batch installer script to make 
+running on Chrome as easy as possible in the near future.
 
 If you can't wait for more detailed instructions, download the full source
-(click on Releases, then get the latest zip file), unzip to C:\JKit, then
-go to the extensions page in Chrome. Enable developer mode, click the "Load
-Unpacked" button, and select C:\JKit as the folder. JKit will load, and it
-will remain loaded through restarts.
+from the Chrome branch, then go to the extensions page in Chrome. Enable 
+developer mode, click the "Load Unpacked" button, and select where you downloaded the source as 
+the folder. JKit will load, and it will remain loaded through restarts.
 
 ### Opera, Edge
 Edge is not supported at all at this time.
