@@ -2,7 +2,7 @@
     "description": "JKit -- Enhancements for BDSMLR",
     "manifest_version": 2,
     "name": "jkit",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "homepage_url": "https://github.com/jenevieveee/jkit",
     "content_scripts": [{
         "js": [

@@ -20,12 +20,26 @@ function addTagsToElement( request ) {
     // console.log( "Got message: " + request );
     
     bundleId = request.tagbundle;
-    let tagit_arr = document.getElementById("Tags").getElementsByClassName("tagit-new");
+	
+    let tagholder = document.getElementById("Tags");
+	if (tagholder == null ) { 
+		tagholder = document.getElementById("Tagsphoto");
+	}
+	let tagit_arr =	tagholder.getElementsByClassName("tagit-new");
     let tagit_input = tagit_arr[0].firstChild;
     
     //Extra commas don't hurt
     tagit_input.value = tagit_input.value + ", " + tctagssettings[ bundleId ] + ",";
     // send response back to daemon
+	document.dispatchEvent(
+		new KeyboardEvent("keydown", {
+		    key: 0x1d,
+		    keyCode: 0x1d, // send enter
+		    shiftKey: false,
+		    ctrlKey: false,
+		    metaKey: false
+		})
+	);
     return Promise.resolve({ response: "Added tags" } );
 }
 
