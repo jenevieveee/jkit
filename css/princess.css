@@ -17,6 +17,7 @@ body {
 }
 .activityunits:hover {
     background: #fff0cc;
+	color:#b298ff;
 }
 
 .activityunits a {
@@ -39,20 +40,32 @@ body {
 	box-shadow: 0px 0px 6px violet;
 }
 
+/* Not an fa- icon, but included here because its part of the top navbar*/
+.header .menu ul li a {
+	background: none !important;
+}
+.m_home::before {
+	content: "🏰" !important;
+	font-size:2em !important;
+}
+.fa-bolt::before {
+	content: "⚡" !important;
+}
 .fa-cog::before {
     content: "⚙" !important;
 }
-
 .fa-comment::before {
     content: "💭" !important;
     text-shadow: 0 0 1px #aa0000;
 }
-
 .fa-heart::before {
     content: "💕" !important;
 }
 .fa-plus-circle::before {
     content: "🎉" !important;
+}
+.fa-question-circle::before {
+	content: "🙋" !important;
 }
 .fa-retweet::before {
     content: "💫";
@@ -62,7 +75,13 @@ body {
 .fa-tags::before {
     content: "🏷️" !important;
 }
-
+.fa-user::before {
+	content: "👸" !important;
+}
+.fa.fa-retweet.retweeticon {
+	background: white !important;
+}
+	
 
 .feed.clearfix {
     padding-top: 5px;
@@ -112,6 +131,11 @@ body {
     /* box-shadow: 0px 0px 6px violet; */
 }
 
+.postfooter {
+	border-right: 1px solid hotpink;
+}
+	
+
 .post_info {
     text-align: center;
 }
@@ -159,6 +183,14 @@ body {
     box-shadow: 0px 0px 6px violet;
 }
 
+#likecontainer {
+	border-bottom: 1px solid hotpink;
+	border-right: 1px solid hotpink;
+	padding-bottom: 5px;
+	margin-right: -1px !important;
+	padding-left: 90px;
+	padding-left: 90px;
+}
 
 #newsup {
     background-color: rgba(0,0,0,0) !important;

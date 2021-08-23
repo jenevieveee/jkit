@@ -47,7 +47,10 @@ function addMuteButton() {
 	muteButton.style.height = "32px";
 	muteButton.style.float = "left";
 	muteButton.style.position = "relative";
-	muteButton.style.marginLeft = "16px";
+	muteButton.style.marginLeft = "-16px";
+	muteButton.style.marginTop = "-12px";
+	muteButton.style.border = "1px solid white";
+	muteButton.style.borderRadius = "50%"
 	//muteButton.addEventListener("click", startMutingSequence );
 	muteButton.onclick = startMutingSequence;
 	
