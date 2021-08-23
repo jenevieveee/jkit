@@ -6,10 +6,6 @@ var bosssettings = {
     bossscreentimeout: 10
 };
 
-var cumsettings = {
-    cumactive: false
-};
-
 var dashsettings = {
     bigreblog: false
     ,reblogonbottom: false
@@ -20,11 +16,6 @@ var dashsettings = {
     ,fixcdn05: false
     ,fixactivity: false
     ,noappnotice: false
-};
-
-var goonsettings = {
-    goonactive: false
-    ,sissyactive: false
 };
 
 var mutesettings = {
@@ -53,14 +44,8 @@ function checkStoredSettings(storedSettings) {
     if (!storedSettings.bosssettings) {
         browser.storage.local.set({bosssettings});
     }
-    if (!storedSettings.cumsettings) {
-        browser.storage.local.set({cumsettings});
-    }
     if (!storedSettings.dashsettings) {
         browser.storage.local.set({dashsettings});
-    }
-    if (!storedSettings.goonsettings) {
-        browser.storage.local.set({goonsettings});
     }
     if (!storedSettings.skinsettings) {
         browser.storage.local.set({skinsettings});

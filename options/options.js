@@ -5,9 +5,6 @@
 const bossScreenInput = document.querySelector("#BossScreen");
 const bossScreenTimeoutInput = document.querySelector("#BossScreenTimeout");
 
-// JKit-cum: Cum on the screen
-const cumInput = document.querySelector("#CumActive");
-
 // JKit-dash: Dash tweaks
 const bigReblogInput = document.querySelector("#BigReblog");
 const reblogOnBottomInput = document.querySelector("#ReblogOnBottom");
@@ -20,11 +17,6 @@ const fixCdn05Input = document.querySelector("#FixCdn05");
 const fixActivityInput = document.querySelector("#FixActivity");
 
 const messagesLayoutInput = document.querySelector("#MessagesLayout");
-
-// JKit-goon: Hypno
-// Removed because including the images violates github tos 
-//const goonActiveInput = document.querySelector("#GoonActive");
-//const sissyActiveInput = document.querySelector("#SissyActive");
 
 //JKit-skin: Skins
 const skinDefaultInput = document.querySelector("#SkinChoiceDefault");
@@ -57,9 +49,6 @@ function storeSettings() {
             bossscreen: bossScreenInput.checked,
             bossscreentimeout: bossScreenTimeoutInput.value
         },
-        cumsettings: {
-            cumactive: cumInput.checked
-        },
         dashsettings: {
             bigreblog: bigReblogInput.checked,
             reblogonbottom: reblogOnBottomInput.checked,
@@ -73,19 +62,15 @@ function storeSettings() {
       
             messageslayout: messagesLayoutInput.checked
         },
-//        goonsettings: {
-//            goonactive: goonActiveInput.checked,
-//            sissyactive: sissyActiveInput.checked
-//        },
         skinsettings: {
             skindefault: skinDefaultInput.checked,
             skinmetal: skinMetalInput.checked,
             skinprincess: skinPrincessInput.checked,
             overrideblog: overrideBlogInput.checked
         },
-		    mutesettings: {
-			    muteactive: muteActiveInput.checked,
-			    mutetimeout: 30
+		mutesettings: {
+		    muteactive: muteActiveInput.checked,
+		    mutetimeout: 30
         }        
     } );
     console.log("Done saving");
@@ -100,9 +85,6 @@ function updateUI(results) {
   // Boss screen
     bossScreenInput.checked = results.bosssettings.bossscreen || false;
     bossScreenTimeoutInput.value = results.bosssettings.bossscreentimeout || 10;
-  
-  // Cum screen
-    cumInput.checked = results.cumsettings.cumactive;
   
   // Dash tweaks
     bigReblogInput.checked = results.dashsettings.bigreblog || false;

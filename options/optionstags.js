@@ -15,8 +15,8 @@ saveTagsInput.addEventListener("click", () => {storeTagSettingsEntry( false );} 
 tagBundlesActiveInput.addEventListener("click", () => {storeTagSettingsEntry( true );} );
 
 /* On opening the options page, fetch stored settings and update the UI with them. */
-const gettingStoredSettings = browser.storage.local.get("tagssettings");
-gettingStoredSettings.then(updateTagsUI, tagsOnGetError);
+const gettingStoredSettingsTags = browser.storage.local.get("tagssettings");
+gettingStoredSettingsTags.then(updateTagsUI, tagsOnGetError);
 
 function storeTagSettingsEntry( onlyActiveField ) {
     let gettingOldTags = browser.storage.local.get("tagssettings");
