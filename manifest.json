@@ -19,6 +19,8 @@
     }],
     "background": {
         "scripts": [
+					"scripts/common.js",
+					"scripts/storage.js",
 					"scripts/tags.js"
 					]
     },
@@ -41,7 +43,8 @@
         "img/cum/*.png",
         "img/sissy/*.gif",
         "img/sissy/*.jpg",
-		"img/skins/*.png" 
+		"img/skins/*.png",
+		"img/mute-huge.png"
     ],
   
     "options_ui": {

@@ -119,6 +119,7 @@ body {
 .post_info a {
     font-size: 2em !important;
     text-decoration: underline overline #FF3028;
+	display: inline-block;
 }
 .post_info a::after {
     content: " 💖";
