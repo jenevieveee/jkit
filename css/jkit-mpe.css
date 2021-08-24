@@ -1,0 +1,32 @@
+/* Copyright 2021 AJE - JKit https://www.github.com/jenevieveee/jkit */
+
+.jkitmpe {
+	padding: 8px;
+	margin-bottom: 5px;
+	background: #1c2227;
+	color: #0f0;
+	display: inline-block;
+	font-weight: 600;
+	cursor: pointer;
+	margin-left: 1px;
+	margin-right: 1px;
+}
+
+.jkitmpesmall {
+	padding: 4px;
+	margin-bottom: 5px;
+	background: #1c2227;
+	color: #0f0;
+	display: inline-block;
+	font-weight: 400;
+	cursor: pointer;
+	margin-left: 1px;
+	margin-right: 1px;
+}
+
+.jkitmpetext {
+	display: inline-block;
+	font-weight: 400;
+	margin-left: 1px;
+	margin-right: 1px;
+}

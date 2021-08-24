@@ -4,6 +4,10 @@
  * Various Tweaks for the dash 
  */
 
+/* TODO: add floating avatars
+   position: sticky; top 100px;
+*/
+
 var bBigReblog = false;
 var bReblogOnBottom = false;
 var bReblogGrid = false;
@@ -41,26 +45,30 @@ function loadOptions_dash() {
 }
 
 function loadCSS_dash( results ) {
-	var head = document.getElementsByTagName('HEAD')[0];
+	let head = document.getElementsByTagName('HEAD')[0];
 	bBigReblog = results.dashsettings.bigreblog;
     bReblogOnBottom = results.dashsettings.reblogonbottom;
     bReblogGrid = results.dashsettings.rebloggrid;
     bShortenPosts = results.dashsettings.shortenposts;
     bNoAppNotice = results.dashsettings.noappnotice;
 	bSearchFocus = results.dashsettings.searchfocus;
+	bFloatAvi = results.dashsettings.floatavi;
     
     bFixCdn05 = results.dashsettings.fixcdn05;
     bFixActivity = results.dashsettings.fixactivity;
     
     bMessagesLayout = results.dashsettings.messageslayout;
+	
     
  
     // Tweaks
-	if ( bBigReblog == true ) setDashTweak( head, "css/BigReblog.css" );
-	if ( bReblogOnBottom == true ) setDashTweak( head, "css/ReblogOnBottom.css" );
-	if ( bReblogGrid == true ) setDashTweak( head, "css/ReblogGrid.css" );
-    if ( bShortenPosts == true ) setDashTweak( head, "css/ShortenPosts.css" );
-    if ( bNoAppNotice == true ) setDashTweak( head, "css/AppNotice.css" );
+	if ( bBigReblog == true ) addCssFile( head, "css/BigReblog.css" );
+	if ( bReblogOnBottom == true ) addCssFile( head, "css/ReblogOnBottom.css" );
+	if ( bReblogGrid == true ) addCssFile( head, "css/ReblogGrid.css" );
+	if ( bShortenPosts == true ) addCssFile( head, "css/ShortenPosts.css" );
+	if ( bNoAppNotice == true ) addCssFile( head, "css/AppNotice.css" );
+	if ( bFloatAvi == true ) addCssFile( head, "css/FloatAvi.css" );
+	
 
 	if ( bSearchFocus == true ) setSearchFocus();
     
@@ -69,17 +77,10 @@ function loadCSS_dash( results ) {
     if ( bFixActivity == true ) fixActivity();
     
     // Full-page changes
-    if ( bMessagesLayout == true ) setDashTweak( head, "css/messages.css" );
+	if ( bMessagesLayout == true ) addCssFile( head, "css/messages.css" );
 }
 
-function setDashTweak( head, path ) {
-	let link = document.createElement('link');
-	link.rel = 'stylesheet';
-	link.type = 'text/css';
-	let cssurl = browser.runtime.getURL( path );
-	link.href = cssurl;
-	head.appendChild(link);
-}
+
 
 function fixCdn05() {    
     imgs = document.querySelectorAll("img");

@@ -13,9 +13,14 @@ var dashsettings = {
     ,shortenposts: false
     ,messageslayout: false
 	,searchfocus: false
+	,floatavi: false
     ,fixcdn05: false
     ,fixactivity: false
     ,noappnotice: false
+};
+
+var mpesettings = {
+	mpeactive: false
 };
 
 var mutesettings = {
@@ -47,13 +52,16 @@ function checkStoredSettings(storedSettings) {
     if (!storedSettings.dashsettings) {
         browser.storage.local.set({dashsettings});
     }
+    if (!storedSettings.mpesettings) {
+		browser.storage.local.set({mpesettings});
+	}
+	if (!storedSettings.mutesettings) {
+		browser.storage.local.set({mutesettings});
+	}
     if (!storedSettings.skinsettings) {
         browser.storage.local.set({skinsettings});
     }
     if (!storedSettings.tagssettings) {
         browser.storage.local.set({tagssettings});
-    }
-    if (!storedSettings.mutesettings) {
-        browser.storage.local.set({mutesettings});
     }
 }

@@ -42,3 +42,12 @@ function unixtime() {
 	return ts;
 }
 
+function addCssFile( head, path ) {
+	let link = document.createElement('link');
+	link.rel = 'stylesheet';
+	link.type = 'text/css';
+	let cssurl = browser.runtime.getURL( path );
+	link.href = cssurl;
+	head.appendChild(link);
+}
+
