@@ -1,0 +1,14 @@
+/* Copyright 2021 AJE JKit https://www.github.com/jenevieveee/jkit */
+
+.avatar.preview.pav {
+	position: sticky !important;
+	top: 100px; /* Keeps avi from going behind bdsmlr logo */
+	margin-bottom:32px; /* keeps it from flowing into next avi */
+}
+
+.jkit-mute {
+	position:sticky !important; /* If we enable floating avatars, make sure this is the one we use. */
+	margin-top: -44px !important; /* sets it into the avi, countering the avi margin-bottom */
+	z-index: 2px;
+	top:148px;
+}

@@ -15,6 +15,7 @@ const reblogGridInput = document.querySelector("#ReblogGrid");
 const shortenPostsInput = document.querySelector("#ShortenPosts");
 const appNoticeInput = document.querySelector("#AppNotice");
 const searchFocusInput = document.querySelector("#SearchFocus");
+const floatAviInput = document.querySelector("#FloatAvi");
 
 const fixCdn05Input = document.querySelector("#FixCdn05");
 const fixActivityInput = document.querySelector("#FixActivity");
@@ -67,6 +68,7 @@ function storeSettings() {
             shortenposts: shortenPostsInput.checked,
             noappnotice: appNoticeInput.checked,
 			searchfocus: searchFocusInput.checked,
+			floatavi : floatAviInput.checked,
       
             fixcdn05: fixCdn05Input.checked,
             fixactivity: fixActivityInput.checked,
@@ -111,13 +113,14 @@ function updateUI(results) {
     shortenPostsInput.checked = results.dashsettings.shortenposts || false;
     appNoticeInput.checked = results.dashsettings.noappnotice || false;
     searchFocusInput.checked = results.dashsettings.searchfocus || false;
+	floatAviInput.checked = results.dashsettings.floatavi || false;
   
     fixCdn05Input.checked = results.dashsettings.fixcdn05 || false;
     fixActivityInput.checked = results.dashsettings.fixactivity || false;
   
     messagesLayoutInput.checked = results.dashsettings.messageslayout || false;
   
-  // Goonette
+  // Goonette:
   //  goonActiveInput.checked = results.goonsettings.goonactive || false;
   //  sissyActiveInput.checked = results.goonsettings.sissyactive || false;
   

@@ -10,8 +10,6 @@ browser.storage.onChanged.addListener( function() {
 });
 
 loadOptions_jkit( "mutesettings", initMute );
-//browser.storage.local.get( "mutesettings" ).
-//	then( initMute );
 
 function updateWindow( ev ) {
 	// update the page when it loads more posts.

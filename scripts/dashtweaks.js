@@ -4,6 +4,10 @@
  * Various Tweaks for the dash 
  */
 
+/* TODO: add floating avatars
+   position: sticky; top 100px;
+*/
+
 var bBigReblog = false;
 var bReblogOnBottom = false;
 var bReblogGrid = false;
@@ -48,11 +52,13 @@ function loadCSS_dash( results ) {
     bShortenPosts = results.dashsettings.shortenposts;
     bNoAppNotice = results.dashsettings.noappnotice;
 	bSearchFocus = results.dashsettings.searchfocus;
+	bFloatAvi = results.dashsettings.floatavi;
     
     bFixCdn05 = results.dashsettings.fixcdn05;
     bFixActivity = results.dashsettings.fixactivity;
     
     bMessagesLayout = results.dashsettings.messageslayout;
+	
     
  
     // Tweaks
@@ -61,6 +67,8 @@ function loadCSS_dash( results ) {
 	if ( bReblogGrid == true ) setDashTweak( head, "css/ReblogGrid.css" );
     if ( bShortenPosts == true ) setDashTweak( head, "css/ShortenPosts.css" );
     if ( bNoAppNotice == true ) setDashTweak( head, "css/AppNotice.css" );
+	if ( bFloatAvi == true ) setDashTweak( head, "css/FloatAvi.css" );
+	
 
 	if ( bSearchFocus == true ) setSearchFocus();
     

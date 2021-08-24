@@ -17,6 +17,7 @@ var dashsettings = {
     ,shortenposts: false
     ,messageslayout: false
 	,searchfocus: false
+	,floatavi: false
     ,fixcdn05: false
     ,fixactivity: false
     ,noappnotice: false
