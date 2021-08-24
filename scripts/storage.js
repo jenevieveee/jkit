@@ -28,6 +28,10 @@ var goonsettings = {
     ,sissyactive: false
 };
 
+var mpesettings = {
+	mpeactive: false
+};
+
 var mutesettings = {
 	muteactive: false
 	,mutetimeout: 30
@@ -63,13 +67,16 @@ function checkStoredSettings(storedSettings) {
     if (!storedSettings.goonsettings) {
         browser.storage.local.set({goonsettings});
     }
+    if (!storedSettings.mpesettings) {
+		browser.storage.local.set({mpesettings});
+	}
+	if (!storedSettings.mutesettings) {
+		browser.storage.local.set({mutesettings});
+	}
     if (!storedSettings.skinsettings) {
         browser.storage.local.set({skinsettings});
     }
     if (!storedSettings.tagssettings) {
         browser.storage.local.set({tagssettings});
-    }
-    if (!storedSettings.mutesettings) {
-        browser.storage.local.set({mutesettings});
     }
 }

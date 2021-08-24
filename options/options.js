@@ -33,6 +33,9 @@ const skinPrincessInput = document.querySelector("#SkinChoicePrincess");
 const skinMetalInput = document.querySelector("#SkinChoiceMetal");
 const overrideBlogInput = document.querySelector("#OverrideBlog");
 
+//MPE 
+const mpeActiveInput = document.querySelector("#MPEActive");
+
 //Mute
 const muteActiveInput = document.querySelector("#MuteActive");
 const muteTimeoutInput = document.querySelector("#MuteTimeout");
@@ -85,10 +88,13 @@ function storeSettings() {
             skinprincess: skinPrincessInput.checked,
             overrideblog: overrideBlogInput.checked
         },
-		    mutesettings: {
-			    muteactive: muteActiveInput.checked,
-			    mutetimeout: 30
-        }        
+		mutesettings: {
+			muteactive: muteActiveInput.checked,
+			mutetimeout: 30
+        },
+		mpesettings: {
+			mpeactive: mpeActiveInput.checked
+		}		
     } );
     console.log("Done saving");
 }
@@ -119,7 +125,10 @@ function updateUI(results) {
     fixActivityInput.checked = results.dashsettings.fixactivity || false;
   
     messagesLayoutInput.checked = results.dashsettings.messageslayout || false;
-  
+
+  // mpe
+	mpeActiveInput.checked = results.mpesettings.mpeactive || false;
+	
   // Goonette:
   //  goonActiveInput.checked = results.goonsettings.goonactive || false;
   //  sissyActiveInput.checked = results.goonsettings.sissyactive || false;

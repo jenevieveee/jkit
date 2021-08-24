@@ -13,7 +13,8 @@
                 "scripts/cum.js", 
                 "scripts/skin.js",
                 "scripts/tags_context.js",
-                "scripts/mute.js"
+                "scripts/mute.js",
+				"scripts/mpe.js"
                 ],
         "matches": [ "*://*.bdsmlr.com/*" ]
     }],
