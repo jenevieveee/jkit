@@ -5,11 +5,14 @@
 console.log( "JKit-tags daemon loading" );
 
 // Load the tags.
-tagssettingsPromise = browser.storage.local.get( "tagssettings");
-tagssettingsPromise.then( createTagsMenu, onBgTagsError );
+// Don't do anything unless this is bdsmlr
+//if ( window.location.hostname.includes("bdsmlr.com") ) {
+	tagssettingsPromise = browser.storage.local.get( "tagssettings");
+	tagssettingsPromise.then( createTagsMenu, onBgTagsError );
 
-// Add a listener to update the menus if a tag is added.
-browser.storage.onChanged.addListener( updateTagsMenu );
+	// Add a listener to update the menus if a tag is added.
+	browser.storage.onChanged.addListener( updateTagsMenu );
+//}
 
 function createTagsMenu( results ) {
 	// We need this happen in-order, so the remove  calls to create in
@@ -42,9 +45,9 @@ function createTagsMenu2( results ) {
 browser.contextMenus.onClicked.addListener((info, tab) => {    
     let bundleId = info.menuItemId.substr(15);
     //console.log( "clicked on " + realId );
-    browser.tabs.query( {currentWindow:true, active:true} )
-       .then( function (tabs) { sendMessageToCS(tabs, bundleId ); })
-       .catch(onBgTagsError);
+	browser.tabs.query( {currentWindow:true, active:true} )
+		.then( function (tabs) { sendMessageToCS(tabs, bundleId ); })
+		.catch(onBgTagsError);
 });
 
 function sendMessageToCS( tabs, id ) {

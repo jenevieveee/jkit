@@ -29,17 +29,10 @@ function addTagsToElement( request ) {
     let tagit_input = tagit_arr[0].firstChild;
     
     //Extra commas don't hurt
-    tagit_input.value = tagit_input.value + ", " + tctagssettings[ bundleId ] + ",";
+    tagit_input.value = tagit_input.value + ", " + tctagssettings[ bundleId ] + "," + "\n";
+	tagit_input.blur();
+	tagit_input.focus();
     // send response back to daemon
-	document.dispatchEvent(
-		new KeyboardEvent("keydown", {
-		    key: 0x1d,
-		    keyCode: 0x1d, // send enter
-		    shiftKey: false,
-		    ctrlKey: false,
-		    metaKey: false
-		})
-	);
     return Promise.resolve({ response: "Added tags" } );
 }
 

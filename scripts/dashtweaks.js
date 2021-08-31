@@ -14,6 +14,8 @@ var bReblogGrid = false;
 var bShortenPosts = false;
 var bSetFixActivityClick= false;
 var bUpdatedActivitiesSdata = false;
+var bSetFixEntitiesClick = false;
+var bUpdatedActivitiesEntities = false;
 var bNoAppNotice = false;
 
 var bFixCdn05 = false;
@@ -56,6 +58,7 @@ function loadCSS_dash( results ) {
     
     bFixCdn05 = results.dashsettings.fixcdn05;
     bFixActivity = results.dashsettings.fixactivity;
+	bFixEntityCodes = results.dashsettings.fixentities;
     
     bMessagesLayout = results.dashsettings.messageslayout;
 	
@@ -75,12 +78,16 @@ function loadCSS_dash( results ) {
     // Fixes
     if ( bFixCdn05 == true ) fixCdn05();
     if ( bFixActivity == true ) fixActivity();
+	if ( bFixEntityCodes == true ) {
+		addCssFile( head, "css/ActivityAlign.css" );
+		fixEntities();
+	}
     
     // Full-page changes
-	if ( bMessagesLayout == true ) addCssFile( head, "css/messages.css" );
+	if ( bMessagesLayout == true && window.location.pathname.includes("messages")) {
+		addCssFile( head, "css/messages.css" );
+	}	
 }
-
-
 
 function fixCdn05() {    
     imgs = document.querySelectorAll("img");
@@ -105,7 +112,7 @@ function fixCdn05() {
 
 function fixActivity() {
     if ( bSetFixActivityClick == false ) {
-        let bolts = document.getElementsByClassName("bolttop")
+        let bolts = document.getElementsByClassName("bolttop");
         for (let i = 0; i < bolts.length; i ++ ) {
             bolts[i].addEventListener('click', function() { setTimeout( updateSdataListeners, 500); } );
         }
@@ -149,3 +156,81 @@ function setSearchFocus2() {
 	searchInput = document.getElementById("searchtext");
 	searchInput.focus(); 
 }
+
+function fixEntities() { 
+	if ( bSetFixEntitiesClick == false ) {
+		let bolts = document.getElementsByClassName("bolttop")
+		for (let i = 0; i < bolts.length; i ++ ) {
+			bolts[i].addEventListener('click', function() { setTimeout( updateEntitiesListener1, 500); } );
+		}
+		bSetFixEntitiesClick = true;
+	}
+	fixTitlesEntitiesInit();
+}
+
+function fixTitlesEntitiesInit() {
+	window.onscroll = updateEnititesWindow;
+	// Wait 1s for page to load and panels to be fetched
+	// This needs to be done once on page load; after that the listener handles it.
+	setTimeout(fixTitlesEntities, 1000 );
+}
+function updateEnititesWindow( ev ) {
+	// update the page when it loads more posts.
+	if (document.body.scrollHeight > currHeight) {
+		currHeight = document.body.scrollHeight;
+		fixTitlesEntities();
+	}
+}
+
+function fixTitlesEntities() {
+	let titles = document.getElementsByClassName("titletext");
+	if (titles.length == 0 ) {
+		let allposts = document.getElementsByClassName("post_info");
+		// posts haven't been fetched yet. Try Again.
+		if ( allposts.length == 0 ) {
+			setTimeout(fixTitlesEntities, 1000 );
+		}
+	}
+	for (let i = 0; i < titles.length; i ++ ) {
+		let str = titles[i].innerHTML;		
+		let str2 = str.replace(/&amp;/g, "&").replace(/&nbsp;/g, " "); //non-breaking space.
+
+		titles[i].innerHTML = str2;
+	}
+}
+
+function updateEntitiesListener1() {
+	//latestnotes isn't present in the DOM until the activity icon is clicked, 
+	// so we need to double-chain the listeners.
+	let showComments = document.getElementsByClassName("latestnotes")[0];
+	if ( showComments == null ) {
+		// hasn't loaded yet
+		setTimeout( updateEntitiesListener1, 500 );
+	}
+	else {
+		showComments.addEventListener('click', function() { setTimeout( updateEntitiesListener2, 200); } );
+	}
+};
+
+function updateEntitiesListener2() {
+	let allActivities = document.getElementsByClassName("allActivityPosts")[0];
+	let comments = document.getElementsByClassName("singlecommenttop");
+	let fixedComments = document.getElementsByClassName("jkit-singlecommenttop");
+	for ( let i=0; i < comments.length; i++ ){
+		let str = comments[i].innerHTML;		
+		let str2 = str.replace(/&amp;/g, "&").replace(/(&nbsp;)+/g, "<br>");
+		comments[i].innerHTML = str2;
+		comments[i].className = "jkit-singlecommenttop";
+		bUpdatedActivitiesEntities = true;
+	}
+	
+	if ( comments.length == 0 && fixedComments.length == 0 ) {
+		// We updated, but there's nothing there now, indicating they closed the activity pane.
+		// Another click of the lightning icon will restart the scan/replace.
+		bUpdatedActivitiesSdata = false;
+	}
+	else {
+		// check for scroll-down/data refresh
+		setTimeout( updateEntitiesListener2, 2000 );
+	}
+}	

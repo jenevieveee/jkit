@@ -14,7 +14,8 @@
                 "scripts/skin.js",
                 "scripts/tags_context.js",
                 "scripts/mute.js",
-				"scripts/mpe.js"
+				"scripts/mpe.js",
+				"scripts/queue.js"
                 ],
         "matches": [ "*://*.bdsmlr.com/*" ]
     }],
@@ -32,9 +33,7 @@
     },
 
     "permissions": [
-        "*://*.bdsmlr.com/*",
         "storage",
-        "activeTab",
         "contextMenus"
     ],
 
