@@ -19,8 +19,13 @@ const floatAviInput = document.querySelector("#FloatAvi");
 
 const fixCdn05Input = document.querySelector("#FixCdn05");
 const fixActivityInput = document.querySelector("#FixActivity");
+const fixEntitiesInput = document.querySelector("#FixEntities");
 
 const messagesLayoutInput = document.querySelector("#MessagesLayout");
+const queueCleanupInput = document.querySelector("#QueueCleanup");
+
+const fixNotSearchInput = document.querySelector("#FixNotSearch");
+const sensibleSearchInput = document.querySelector("#SensibleSearch");
 
 // JKit-goon: Hypno
 // Removed because including the images violates github tos 
@@ -75,8 +80,12 @@ function storeSettings() {
       
             fixcdn05: fixCdn05Input.checked,
             fixactivity: fixActivityInput.checked,
+			fixnotsearch: fixNotSearchInput.checked,
+			fixentities: fixEntitiesInput.checked,
       
-            messageslayout: messagesLayoutInput.checked
+            messageslayout: messagesLayoutInput.checked,
+            queuecleanup: queueCleanupInput.checked,
+			sensiblesearch: sensibleSearchInput.checked
         },
 //        goonsettings: {
 //            goonactive: goonActiveInput.checked,
@@ -121,11 +130,18 @@ function updateUI(results) {
     searchFocusInput.checked = results.dashsettings.searchfocus || false;
 	floatAviInput.checked = results.dashsettings.floatavi || false;
   
+  //fixes
     fixCdn05Input.checked = results.dashsettings.fixcdn05 || false;
     fixActivityInput.checked = results.dashsettings.fixactivity || false;
-  
+	fixNotSearchInput.checked = results.dashsettings.fixnotsearch || false;
+	fixEntitiesInput.checked = results.dashsettings.fixentities || false;
+	
+  // messages 
     messagesLayoutInput.checked = results.dashsettings.messageslayout || false;
-
+  //Queue/Drafts
+	queueCleanupInput.checked = results.dashsettings.queuecleanup || false;
+  // Search 
+	sensibleSearchInput.checked = results.dashsettings.sensiblesearch || false;
   // mpe
 	mpeActiveInput.checked = results.mpesettings.mpeactive || false;
 	

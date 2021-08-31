@@ -28,7 +28,6 @@ function init_mpe( results ) {
 	let selectAllButton = document.createElement("div");
 	selectAllButton.className = "jkitmpe";
 	selectAllButton.innerHTML = "Select All";
-	//feed.appendChild( selectAllButton );
 	feed.insertBefore( selectAllButton, editbox.previousSibling);
 	selectAllButton.addEventListener("click", (ev) => {doWorkSelectAll(ev, true);} );
 	

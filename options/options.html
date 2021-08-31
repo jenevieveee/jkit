@@ -32,16 +32,32 @@
        
 		<div class="title">Messages Tweaks</div> 
         <input id="MessagesLayout" type="checkbox" name="MessagesLayout"/> <label for="MessagesLayout">Improves the look of the /messages page. No more blog names over the message preview.</label><br>
+        
         <div class="title">Mass Post Editor</div>
         <input id="MPEActive" type="checkbox" name="MPEActive"/> <label for="MPEActive">Adds selection features to Mass Post Editor</label><br>
+      	
       	<div class="title">Blog Tweaks</div>
         <input id="SearchFocus" type="checkbox" name="SearchFocus"/> <label for="SearchFocus">Sets the cursor focus on the search box for blog searches</label><br>
+        
+        <div class="title">Queue/Drafts Cleanup</div>
+        <input id="QueueCleanup" name="QueueCleanup" type="checkbox"/><label for="QueueCleanup">Cleanups the help information on the queue and drafts pages</label><br>
+        
+        <div class="title">Search Options</div>
+        <input id="SensibleSearch" name="SensibleSearch" type="checkbox"/><label for="SensibleSearch">Allows AND, OR, and NOT to be used in searches.</label><br>
+        
         <div class="title" >Fixes</div>
         <div class="optdesc">
             Misc fixes for broken BDSMLR stuff. These may suddenly stop working. Generally, they make the experience better, until the problem is actually fixed sever side, then they make the problem worse. These options will be removed when the actual fix is made.
          </div>
         <input id="FixCdn05" type="checkbox" name="FixCdn05"/> <label for="FixCdn05">Fix <i>most</i> (not all) broken images on cdn05.bdsmlr.com</label><br>
+        
         <input id="FixActivity" type="checkbox" name="FixActivity"/> <label for="FixActivity">"Fix" the non-responsive activity sidebar by disabling the sidebar action for activity and opening the links in a new tab.</label><br>
+        
+        <input id="FixNotSearch" type="checkbox" name="FixNotSearch"/> <label for="FixNotSearch">"Fixes" the NOT (block) functionality by hiding posts that contain the blocked tag. You may see a blank page if all of the returned posts contain the blocked tag.</label><br>
+        
+        <input id="FixEntities" type="checkbox" name="FixEntities"/><label for="FixEntities">Fixes the html entites that sometimes appear in place of the actual characters. For example, the #39 and nbsp codes
+        that appear in the activity comments.</label><br>
+        
     </section>
     <hr>
     <section class="Skins">

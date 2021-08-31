@@ -21,6 +21,8 @@ var dashsettings = {
     ,fixcdn05: false
     ,fixactivity: false
     ,noappnotice: false
+    ,queuecleanup: false
+    ,sensiblesearch:false
 };
 
 var goonsettings = {
