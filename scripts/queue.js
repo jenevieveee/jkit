@@ -214,7 +214,7 @@ function fixNotSearch() {
 	let newPag = pagination.cloneNode(true);
 	let searchTitle = document.getElementsByClassName("searchtitle")[0];
 	searchTitle.parentNode.insertBefore( newPag, searchTitle);
-	let newfeed = document.getElementsByClassName("newsfeed")[0];
+	let newsfeed = document.getElementsByClassName("newsfeed")[0];
 	newsfeed.style.height = "auto";
 }
 		
