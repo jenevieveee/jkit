@@ -76,7 +76,7 @@ function startMutingSequence( /* MouseEvent */ e ) {
 	let panel = e.target.parentNode;
 	if ( panel == null ) {
 		// something went wrong
-		console.log(" Can't get parent of Even target");
+		console.log(" Can't get parent of Event target");
 		return;
 	}
 	// to get the user, get the class ndata from under the panel
@@ -157,7 +157,7 @@ function hideUsers( results, bRecall ) {
 	let mutedUserIds = Object.keys( results.mutesettings);
 	let panels = document.getElementsByClassName("feed clearfix");
 	if ( mutedUserIds.length <= 2 ) {
-		console.debug( "No users to mute" );
+		//console.debug( "No users to mute" );
 		return; // muteactive and mutetimeout should be present, so we need at least 3 entries
 	}
 	for (i=0; i < panels.length; i++ ) {
@@ -175,7 +175,7 @@ function hideUsers( results, bRecall ) {
 		}
 		let susUserId = anchorTarget[0].dataset.id;
 		if ( mutedUserIds.includes( susUserId ) ) {
-			console.debug(" Panel " + currPanel.className + " has userid " + susUserId + ". Hiding" );
+			//console.debug(" Panel " + currPanel.className + " has userid " + susUserId + ". Hiding" );
 			// match. Hide panel
 			currPanel.style.visibility = "hidden";
 			currPanel.style.height = "0px";
