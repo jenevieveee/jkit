@@ -2,7 +2,7 @@
     "description": "JKit -- Enhancements for BDSMLR",
     "manifest_version": 2,
     "name": "jkit",
-    "version": "0.3.0",
+    "version": "0.3.1",
     "homepage_url": "https://github.com/jenevieveee/jkit",
     "content_scripts": [{
         "js": [
@@ -54,7 +54,7 @@
 	"browser_specific_settings": {
 		"gecko": {
 			"strict_min_version": "65.0",
-			"update_url": "https://raw.githubusercontent.com/jenevieveee/jkit/v0.2.1/update-manifest.json"
+			"update_url": "https://raw.githubusercontent.com/jenevieveee/jkit/master/update-manifest.json"
 		}
 	},
 	"chrome_settings_overrides": {
